@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RedisGraph.Test.Recursion": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

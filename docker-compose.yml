@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  redisgraph.test.recursion:
+    image: ${DOCKER_REGISTRY-}redisgraphtestrecursion
+    build:
+      context: .
+      dockerfile: RedisGraph.Test.Recursion/Dockerfile
+  
+  redis:
+    image: redis/redis-stack:latest
+    restart: always
+    volumes:
+      - ./redisdata:/data
+    ports:
+      - 6379:6379
+      - 8001:8001
